@@ -10,6 +10,12 @@
 
 <script>
 export default {
+  
+}
+</script>
+
+<!-- <script>
+export default {
   data() {
     return {
       counter: 0,
@@ -24,7 +30,7 @@ export default {
     }
   },
 }
-</script>
+</script> -->
 
 <style>
 .home {
