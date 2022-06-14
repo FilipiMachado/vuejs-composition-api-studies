@@ -1,14 +1,30 @@
 <template>
   <div class="home">
     <div>
-      <button class="btn">-</button>
-      <span class="counter">0</span>
-      <button class="btn">+</button>
+      <button @click="removeCounter" class="btn">-</button>
+      <span class="counter">{{ counter }}</span>
+      <button @click="addCounter" class="btn">+</button>
     </div>
   </div>
 </template>
 
-
+<script>
+export default {
+  data() {
+    return {
+      counter: 0,
+    }
+  },
+  methods: {
+    addCounter() {
+      this.counter += 1;
+    },
+    removeCounter() {
+      this.counter -= 1;
+    }
+  },
+}
+</script>
 
 <style>
 .home {
