@@ -8,11 +8,45 @@
   </div>
 </template>
 
-<script>
-export default {
-  
-}
+<script setup>
+import { ref } from 'vue'
+  const counter = ref(0)
+
+  function addCounter() {
+    counter.value++
+  }
+
+  function removeCounter() {
+    counter.value--
+  }
+
 </script>
+
+
+<!-- import { ref } from 'vue'
+
+export default {
+  setup() {
+    const counter = ref(10)
+    const counterZero = ref(0)
+
+    function addCounter() {
+      counterZero.value++
+    }
+
+    function removeCounter() {
+      counterZero.value--
+    }
+
+    return {
+      counter,
+      counterZero,
+      addCounter,
+      removeCounter
+    }
+  }
+} 
+-->
 
 <!-- <script>
 export default {
