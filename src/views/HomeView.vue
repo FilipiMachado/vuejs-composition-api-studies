@@ -1,5 +1,6 @@
 <template>
   <div class="home">
+    <h3>{{ counterTitle }}</h3>
     <div>
       <button @click="removeCounter" class="btn">-</button>
       <span class="counter">{{ counter }}</span>
@@ -11,6 +12,7 @@
 <script setup>
 import { ref } from 'vue'
   const counter = ref(0)
+  const counterTitle = ref('My Counter')
 
   function addCounter() {
     counter.value++
