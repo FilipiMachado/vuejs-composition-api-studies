@@ -1,20 +1,14 @@
 <template>
   <div class="home">
-    <h2>{{ appTitle }}</h2>
-    <h3>{{ counterData.title }}:</h3>
-    <div>
-      <button @click="removeCounter" class="btn">-</button>
-      <span class="counter">{{ counterData.count }}</span>
-      <button @click="addCounter" class="btn">+</button>
-    </div>
     <div class="edit">
-      <h4>Edit counter title:</h4>
-      <input v-model="counterData.title" type="text">
-      <span>{{ appTitle }}</span>
+      <button class="btn">-</button>
+      <span class="counter">0</span>
+      <button class="btn">+</button>
     </div>
   </div>
 </template>
 
+<!--
 <script setup>
 //import { ref } from 'vue'
 import { ref, reactive } from 'vue'
@@ -38,7 +32,7 @@ function removeCounter() {
 }
 
 </script>
-
+-->
 
 <!-- import { ref } from 'vue'
 
@@ -88,7 +82,8 @@ export default {
   text-align: center;
   padding: 20px;
 }
-.btn, .counter {
+.btn,
+.counter {
   font-size: 40px;
   margin: 10px;
   cursor: pointer;
