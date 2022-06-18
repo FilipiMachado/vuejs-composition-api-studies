@@ -3,19 +3,46 @@
     <div class="edit">
       <button class="btn">-</button>
       <span class="counter">{{ counter }}</span>
-      <button @click="increaseCounter" class="btn">+</button>
+      <button @click="getPokemons" class="btn">+</button>
     </div>
   </div>
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
+import axios from 'axios'
 
-const counter = ref(0)
+//const counter = ref(0)
 
-function increaseCounter() {
+onMounted(() => {
+  setTimeout(() => {
+    getPokemons();
+  }, 400);
+})
+
+function getPokemons() {
+  axios.get('https://pokeapi.co/api/v2/pokemon/')
+  .then(function (response) {
+    console.log(response.data);
+  })
+  .catch(function (error) {
+    console.log(error);
+  })
+  .then(function () {
+    // always executed
+  });
+}
+
+/* function increaseCounter() {
   counter.value++
 }
+
+function decreaseCounter() {
+  if (counter.value < 1) {
+    return
+  }
+  counter.value--
+} */
 
 </script>
 
