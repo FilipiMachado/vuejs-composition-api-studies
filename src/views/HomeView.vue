@@ -2,11 +2,22 @@
   <div class="home">
     <div class="edit">
       <button class="btn">-</button>
-      <span class="counter">0</span>
-      <button class="btn">+</button>
+      <span class="counter">{{ counter }}</span>
+      <button @click="increaseCounter" class="btn">+</button>
     </div>
   </div>
 </template>
+
+<script setup>
+import { ref } from 'vue'
+
+const counter = ref(0)
+
+function increaseCounter() {
+  counter.value++
+}
+
+</script>
 
 <!--
 <script setup>
@@ -90,5 +101,8 @@ export default {
 }
 .edit {
   margin-top: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 </style>
