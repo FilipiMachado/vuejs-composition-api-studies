@@ -10,11 +10,13 @@
     <div class="edit">
       <h4>Edit counter title:</h4>
       <input v-model="counterData.title" type="text">
+      <span>{{ appTitle }}</span>
     </div>
   </div>
 </template>
 
 <script setup>
+//import { ref } from 'vue'
 import { ref, reactive } from 'vue'
 
 /* const counter = ref(0)
