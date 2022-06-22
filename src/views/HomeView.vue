@@ -1,11 +1,5 @@
 <template>
-  <div class="home">
-    <div class="edit">
-      <button class="btn">-</button>
-      <span class="counter">{{ counter }}</span>
-      <button @click="getPokemons" class="btn">+</button>
-    </div>
-  </div>
+  <div>test</div>
 </template>
 
 <script setup>
