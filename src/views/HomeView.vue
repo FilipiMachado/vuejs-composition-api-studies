@@ -1,8 +1,12 @@
 <template>
-  <div>test</div>
+  <div>
+    <PokemonCard />
+  </div>
 </template>
 
 <script setup>
+import PokemonCard from '../components/PokemonCard.vue'
+
 import { ref, onMounted } from 'vue'
 import axios from 'axios'
 
