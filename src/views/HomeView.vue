@@ -1,6 +1,6 @@
 <template>
   <div>
-    <PokemonCard />
+    <PokemonCard :pokemonData="pokemonResData"/>
   </div>
 </template>
 
@@ -11,6 +11,7 @@ import { ref, onMounted } from 'vue'
 import axios from 'axios'
 
 //const counter = ref(0)
+let pokemonResData = ''
 
 onMounted(() => {
   setTimeout(() => {
@@ -21,7 +22,7 @@ onMounted(() => {
 function getPokemons() {
   axios.get('https://pokeapi.co/api/v2/pokemon/')
   .then(function (response) {
-    console.log(response.data);
+    pokemonResData = response.data
   })
   .catch(function (error) {
     console.log(error);
