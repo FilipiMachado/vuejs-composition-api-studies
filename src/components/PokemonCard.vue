@@ -1,22 +1,22 @@
 <template>
- <div>
-   <div>
-    <div>
+ <div class="main-container">
+   <div class="pokemon-info__wrapper">
+    <div class="left-info__wrapper">
       <div>pikachu photo</div>
       <span>nº 025</span>
     </div>
-    <div>
-      <span>Pikachu</span>
-      <span>Mouse</span>
-      <span>HT 1'04"</span>
-      <span>WT 13.0lb</span>
+    <div class="right-info__wrapper">
+      <span class="right-info__title">Pikachu</span>
+      <span class="right-info__title">Mouse</span>
+      <span class="right-info__title">HT <strong>1'04"</strong></span>
+      <span class="right-info__title">WT <strong>13.0lb</strong></span>
     </div>
    </div>
  </div>
 </template>
 
 <script setup>
-import { onMounted } from 'vue'
+import { onMounted, defineProps } from 'vue'
 
 const props = defineProps(['pokemonData'])
 
