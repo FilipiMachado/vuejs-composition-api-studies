@@ -16,14 +16,29 @@
 </template>
 
 <script setup>
-import { onMounted, defineProps } from 'vue'
+import { onMounted } from 'vue'
+import axios from 'axios'
 
-const props = defineProps(['pokemonData'])
+let pokemonResData = ''
+
+function getPokemons() {
+  axios.get('https://pokeapi.co/api/v2/pokemon/')
+  .then(function (response) {
+    pokemonResData = response.data.results
+  })
+  .catch(function (error) {
+    console.log(error);
+  })
+  .then(function () {
+    // always executed
+  });
+}
 
 onMounted(() => {
-    setTimeout(() => {
-      console.log(pokemonData)
-    }, 1500);
+  getPokemons()
+  setTimeout(() => {
+    console.log(pokemonResData)
+  }, 1500);
 })
 
 </script>
