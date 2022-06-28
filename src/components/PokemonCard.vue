@@ -2,8 +2,8 @@
  <div class="main-container">
    <div class="pokemon-info__wrapper">
     <div class="left-info__wrapper">
-      <img src="../assets/pokemon-img_example.png" alt="">
-      <span>nº 025</span>
+      <img class="left-info__img" src="../assets/pokemon-img_example.png" alt="">
+      <span class="left-info__title">nº 025</span>
     </div>
     <div class="right-info__wrapper">
       <span class="right-info__title">Pikachu</span>
@@ -48,5 +48,26 @@ onMounted(() => {
   display: flex;
   justify-content: center;
 }
-.pokemon-info__wrapper {}
+.pokemon-info__wrapper {
+  display: flex;
+}
+/* Left Content */
+.left-info__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.left-info__img {}
+.left-info__title {
+  margin: 0.2em auto;
+}
+
+/* Right Content */
+.right-info__wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 1em;
+}
+.right-info__title {
+  margin: 0.2em 0em;
+}
 </style>
