@@ -2,7 +2,7 @@
  <div class="main-container">
    <div class="pokemon-info__wrapper">
     <div class="left-info__wrapper">
-      <div>pikachu photo</div>
+      <img src="../assets/pokemon-img_example.png" alt="">
       <span>nº 025</span>
     </div>
     <div class="right-info__wrapper">
@@ -43,6 +43,10 @@ onMounted(() => {
 
 </script>
 
-<style>
-
+<style scoped>
+.main-container {
+  display: flex;
+  justify-content: center;
+}
+.pokemon-info__wrapper {}
 </style>
