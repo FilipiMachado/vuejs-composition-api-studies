@@ -12,6 +12,7 @@
       <span class="right-info__title">WT <strong>13.0lb</strong></span>
     </div>
    </div>
+   <div>test</div>
  </div>
 </template>
 
@@ -46,17 +47,24 @@ onMounted(() => {
 <style scoped>
 .main-container {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  width: 25vw;
+  margin: 0 auto;
 }
 .pokemon-info__wrapper {
   display: flex;
+  border: 1px solid #fff;
+  outline: 5px solid #d34d00;
 }
+
 /* Left Content */
 .left-info__wrapper {
   display: flex;
   flex-direction: column;
 }
-.left-info__img {}
+.left-info__img {
+  margin: 0.2em;
+}
 .left-info__title {
   margin: 0.2em auto;
 }
@@ -68,6 +76,14 @@ onMounted(() => {
   margin: 1em;
 }
 .right-info__title {
+  font-size: 1.2rem;
   margin: 0.2em 0em;
+}
+
+@media screen and (max-width: 750px) {
+  .main-container {
+    width: 80vw;
+    margin: 1em 2em;
+  }
 }
 </style>
