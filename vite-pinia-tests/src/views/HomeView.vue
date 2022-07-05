@@ -9,12 +9,12 @@
       <button @click="increaseCounter(inputCountQuantity.inputCount)" class="plus-button">+{{ inputCountQuantity.inputCount }}</button>
     </div>
 
-    <h1 style="text-align: center;">This counter is {{ testComputedProperty }}</h1>
+    <h1 style="text-align: center;">My age is {{ inputCountQuantity.inputCount }}, i'm considered a {{ testComputedProperty }} person</h1>
 
     <div class="main-container">
       <h4 class="title">Edit Counter Quantity</h4>
       <input v-model="counterData.inputCount" class="input-value" type="number">
-      <button @click="addCounterQuantity" class="input-value">Salvar Quantidade</button>
+      <button @click="addCounterQuantity" class="input-value">Salvar idade</button>
       <!-- <input v-model="counterData.title" class="input-value" type="text"> -->
     </div>
   </div>
@@ -38,7 +38,16 @@ const counterData = reactive({
 })
 
 const testComputedProperty = computed(() => {
-  return "Something"
+  if (inputCountQuantity.inputCount > 0 && inputCountQuantity.inputCount < 3) {
+    return 'baby'
+  } else if (inputCountQuantity.inputCount > 4 && inputCountQuantity.inputCount < 30) {
+    return 'young'
+  } else if (inputCountQuantity.inputCount > 31 && inputCountQuantity.inputCount < 60) {
+    return 'adult'
+  } else if (inputCountQuantity.inputCount > 61) {
+    return 'old'
+  }
+    
 })
 
 const increaseCounter = (amount) => {
