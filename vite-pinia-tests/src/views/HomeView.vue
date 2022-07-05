@@ -8,6 +8,9 @@
       <button @click="increaseCounter(5)" class="plus-button">+5</button>
       <button @click="increaseCounter(inputCountQuantity.inputCount)" class="plus-button">+{{ inputCountQuantity.inputCount }}</button>
     </div>
+
+    <h1 style="text-align: center;">This counter is {{ testComputedProperty }}</h1>
+
     <div class="main-container">
       <h4 class="title">Edit Counter Quantity</h4>
       <input v-model="counterData.inputCount" class="input-value" type="number">
@@ -18,7 +21,7 @@
 </template>
 
 <script setup>
-import { ref, reactive } from "vue"
+import { ref, reactive, computed } from "vue"
 
 const appTitle = "My Amazing Counter App"
 
@@ -32,6 +35,10 @@ const counterData = reactive({
   count: 0,
   title: 'My New Counter',
   inputCount: '',
+})
+
+const testComputedProperty = computed(() => {
+  return "Something"
 })
 
 const increaseCounter = (amount) => {
@@ -49,6 +56,19 @@ function addCounterQuantity () {
 
 
 </script>
+
+<!-- 
+<script>
+export default {
+  computed: {
+    myComputedProperty() {
+      // perform logic based on a data property
+      return 'my result'
+    }
+  }
+}
+</script> 
+-->
 
 <style scoped>
 .main-container {
