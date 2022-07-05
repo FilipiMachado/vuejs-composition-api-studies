@@ -21,7 +21,7 @@
 </template>
 
 <script setup>
-import { ref, reactive, computed } from "vue"
+import { ref, reactive, computed, watch } from "vue"
 
 const appTitle = "My Amazing Counter App"
 
@@ -47,7 +47,11 @@ const testComputedProperty = computed(() => {
   } else if (inputCountQuantity.inputCount > 61) {
     return 'old'
   }
-    
+})
+
+watch(() => counterData.count, (newCount, oldCount) => {
+  console.log('newCount', newCount)
+  console.log('oldCount', oldCount)
 })
 
 const increaseCounter = (amount) => {
@@ -69,10 +73,20 @@ function addCounterQuantity () {
 <!-- 
 <script>
 export default {
+  data() {
+    return {
+      count: 0,
+    }
+  },
   computed: {
     myComputedProperty() {
       // perform logic based on a data property
       return 'my result'
+    }
+  },
+  watch: {
+    count(newCount, oldCount) {
+      if (newCount == 20) alert('Hello World!')
     }
   }
 }
