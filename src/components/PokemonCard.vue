@@ -12,7 +12,11 @@
       <span class="right-info__title">WT <strong>13.0lb</strong></span>
     </div>
    </div>
-   <div>test</div>
+   <div>
+    <div>
+      <span>Pikachu's Ability. When an enemy touches Pikachu, there's a chance that the static electricity in Pikachu's body will render the foe paralyzed.</span>
+    </div>
+   </div>
  </div>
 </template>
 
