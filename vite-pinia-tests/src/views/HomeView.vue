@@ -1,6 +1,7 @@
 <template>
   <div class="main-container">
     <h1 class="title">{{ appTitle }}</h1>
+    <RouterLink to="/directives">Directives</RouterLink>
     <div class="buttons-container">
       <button @click="decreaseCounter" class="minus-button">-</button>
       <span class="value">{{ counterData.count }}</span>
