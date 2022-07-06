@@ -54,6 +54,10 @@ watch(() => counterData.count, (newCount, oldCount) => {
 })
 
 /* watch(() => counterData.count, (newCount, oldCount) => {
+  console.log(newCount, oldCount)
+}) */
+
+/* watch(() => counterData.count, (newCount, oldCount) => {
   if (newCount == 10) {
     return alert('Hello World!')
   } else {
@@ -97,7 +101,13 @@ export default {
     count(newCount, oldCount) {
       if (newCount == 20) alert('Hello World!')
     }
-  }
+  },
+  mounted() {
+    console.log('mounted!')
+  },
+  unmounted() {
+    console.log('unmounted!')
+  },
 }
 </script> 
 -->
