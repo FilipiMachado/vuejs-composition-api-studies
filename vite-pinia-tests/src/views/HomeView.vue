@@ -50,9 +50,18 @@ const testComputedProperty = computed(() => {
 })
 
 watch(() => counterData.count, (newCount, oldCount) => {
+  console.log(newCount, oldCount)
+})
+
+/* watch(() => counterData.count, (newCount, oldCount) => {
+  if (newCount == 10) {
+    return alert('Hello World!')
+  } else {
+    return 
+  }
   console.log('newCount', newCount)
   console.log('oldCount', oldCount)
-})
+}) */
 
 const increaseCounter = (amount) => {
   counterData.count += amount
