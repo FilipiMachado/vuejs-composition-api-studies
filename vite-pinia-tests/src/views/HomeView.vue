@@ -22,6 +22,7 @@
 
 <script setup>
 import { ref, reactive, computed, watch } from "vue"
+import { vAutofocus } from '../directives/vAutoFocus.js'
 
 const appTitle = "My Amazing Counter App"
 

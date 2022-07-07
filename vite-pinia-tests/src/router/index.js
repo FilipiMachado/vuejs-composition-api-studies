@@ -1,6 +1,6 @@
 import { createRouter } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-import Directives from '../components/Directives.vue'
+import AboutView from '../views/AboutView.vue'
 
 const router = createRouter({
   routes: [
@@ -10,9 +10,9 @@ const router = createRouter({
       component: HomeView,
     },
     {
-      path: '/directives',
-      name: 'directives',
-      component: Directives,
+      path: '/about',
+      name: 'about',
+      component: AboutView,
     },
   ]
 })
