@@ -53,13 +53,14 @@ watch(() => counterData.count, (newCount, oldCount) => {
   console.log(newCount, oldCount)
 })
 
-// Directives
-const vAutofocus =  { // v-autofocus
+// Local Directives
+/* const vAutofocus =  { // v-autofocus
   mounted: (el) => {
     el.focus()
   }
-} 
+}  */
 
+// Watch Examples
 /* watch(() => counterData.count, (newCount, oldCount) => {
   console.log(newCount, oldCount)
 }) */
