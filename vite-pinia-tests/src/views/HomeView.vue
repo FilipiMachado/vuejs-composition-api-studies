@@ -1,7 +1,6 @@
 <template>
   <div class="main-container">
     <h1 class="title">{{ appTitle }}</h1>
-    <RouterLink to="/directives">Directives</RouterLink>
     <div class="buttons-container">
       <button @click="decreaseCounter" class="minus-button">-</button>
       <span class="value">{{ counterData.count }}</span>
@@ -14,7 +13,7 @@
 
     <div class="main-container">
       <h4 class="title">Edit Counter Quantity</h4>
-      <input v-model="counterData.inputCount" class="input-value" type="number">
+      <input v-model="counterData.inputCount" class="input-value" type="number" v-autofocus>
       <button @click="addCounterQuantity" class="input-value">Salvar idade</button>
       <!-- <input v-model="counterData.title" class="input-value" type="text"> -->
     </div>
@@ -53,6 +52,13 @@ const testComputedProperty = computed(() => {
 watch(() => counterData.count, (newCount, oldCount) => {
   console.log(newCount, oldCount)
 })
+
+// Directives
+const vAutofocus =  { // v-autofocus
+  mounted: (el) => {
+    el.focus()
+  }
+} 
 
 /* watch(() => counterData.count, (newCount, oldCount) => {
   console.log(newCount, oldCount)
